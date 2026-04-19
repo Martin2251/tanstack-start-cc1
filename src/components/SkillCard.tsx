@@ -11,13 +11,19 @@ const SkillCard = ({name}:SkillCardProps) => {
     const likes = liked ? 1 : 0;
 
   return (
-    <div className='feature-card'>
-     <p> SkillCard</p>
-      <h2>{name}</h2>
-      <p>{likes} {likes === 1 ? 'like':'likes'} </p>
-      <button onClick={() => setLiked((current) => !current)} type='button'>
-        <Heart fill={liked ? 'currentColor' :'none'} size={18}/>
+    <div className='feature-card island-shell rise-in rounded-3xl p-5'>
+      <div className='flex items-start justify-between gap-4'>
+        <div className='space-y-2'>
+       <p className='island-kicker'> Skill</p>
+      <h2 className='display-title text-2xl font-bold'>{name}</h2>
+      <p className='text-sm text-(--sea-ink-soft)'>{likes} {likes === 1 ? 'like':'likes'} </p>
+        </div>
+            <button className='inline-flex size-11 items-center justify-center' onClick={() => setLiked((current) => !current)} type='button'>
+        <Heart className='' fill={liked ? 'currentColor' :'none'} size={18}/>
       </button>
+      </div>
+  
+  
     </div>
   )
 }
