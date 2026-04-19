@@ -1,3 +1,4 @@
+import { Heart } from 'lucide-react'
 import React, { useState } from 'react'
 
 
@@ -14,7 +15,9 @@ const SkillCard = ({name}:SkillCardProps) => {
       SkillCard
       <h2>{name}</h2>
       <p>{likes} {likes === 1 ? 'like':'likes'} </p>
-      <button onClick={() => setLiked((current) => !current)} type='button'></button>
+      <button onClick={() => setLiked((current) => !current)} type='button'>
+        <Heart fill={liked ? 'currentColor' :'none'} size={18}/>
+      </button>
     </div>
   )
 }
