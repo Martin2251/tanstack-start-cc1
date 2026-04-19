@@ -9,8 +9,15 @@ function App() {
     <h1>Hello</h1>
     <ul>
       <li>
-        <SkillCard />
+        <SkillCard name="Tanstack Start"/>
       </li>
+         <li>
+        <SkillCard name="MongoDB"/>
+      </li>
+         <li>
+        <SkillCard name="TypeScript"/>
+      </li>
+      
     </ul>
     </main>
   )

@@ -11,8 +11,8 @@ const SkillCard = ({name}:SkillCardProps) => {
     const likes = liked ? 1 : 0;
 
   return (
-    <div>
-      SkillCard
+    <div className='feature-card'>
+     <p> SkillCard</p>
       <h2>{name}</h2>
       <p>{likes} {likes === 1 ? 'like':'likes'} </p>
       <button onClick={() => setLiked((current) => !current)} type='button'>
